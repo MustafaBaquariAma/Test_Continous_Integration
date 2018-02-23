@@ -31,14 +31,14 @@ jobs:
           - v1-dependencies-
 
       - run: mvn dependency:go-offline
-      - run: echo $AWS_ACCESS_KEY_ID \
-        echo $AWS_SECRET_ACCESS_KEY \
-        which python \
-        which python3 \
-        pip install awscli --upgrade --user \
-        aws --version \
-        which aws \
-        pwd 
+      - run: echo $AWS_ACCESS_KEY_ID 
+      - run: aws --version echo $AWS_SECRET_ACCESS_KEY 
+      - run: which python 
+      - run: which python3 
+      - run: pip install awscli --upgrade --user
+      - run: aws --version
+      - run: which aws
+      - run: pwd 
 
 
 
