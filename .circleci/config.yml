@@ -32,7 +32,7 @@ jobs:
 
       - run: mvn dependency:go-offline
       - run: echo $AWS_ACCESS_KEY_ID 
-      - run: aws --version echo $AWS_SECRET_ACCESS_KEY 
+      - run: echo $AWS_SECRET_ACCESS_KEY 
       - run: which python 
       - run: which python3 
       - run: pip install awscli --upgrade --user
