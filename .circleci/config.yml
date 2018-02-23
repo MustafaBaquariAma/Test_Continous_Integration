@@ -34,6 +34,8 @@ jobs:
       - run: echo $AWS_ACCESS_KEY_ID 
       - run: echo $AWS_SECRET_ACCESS_KEY 
       - run: which python 
+      - run: curl -O https://bootstrap.pypa.io/get-pip.py
+      - run: python get-pip.py --user 
       - run: pip install awscli --upgrade --user
       - run: aws --version
       - run: which aws
