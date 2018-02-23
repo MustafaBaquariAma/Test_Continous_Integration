@@ -34,7 +34,6 @@ jobs:
       - run: echo $AWS_ACCESS_KEY_ID 
       - run: echo $AWS_SECRET_ACCESS_KEY 
       - run: which python 
-      - run: which python3 
       - run: pip install awscli --upgrade --user
       - run: aws --version
       - run: which aws
