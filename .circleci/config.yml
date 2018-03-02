@@ -55,7 +55,8 @@ jobs:
     docker:
       - image: circleci/openjdk:8-jdk
     steps:
-      - run: which eb
+      - run: source ~/.python_path && which eb
+      - run: source ~/.python_path && eb deploy cognitiveServer-env
    
 
 workflows:

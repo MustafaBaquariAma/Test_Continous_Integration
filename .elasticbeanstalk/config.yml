@@ -16,4 +16,4 @@ global:
   sc: git
   workspace_type: Application
 deploy:
-  artifact: chatbot-flygresor/target/chatbot-flygresor.war
+  artifact: target/my-app-1.0-SNAPSHOT.war
