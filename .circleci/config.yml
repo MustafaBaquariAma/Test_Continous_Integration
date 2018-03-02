@@ -51,10 +51,18 @@ jobs:
       # run tests!
       - run: mvn install
 
-
+  deploy:
+    docker:
+      - image: circleci/openjdk:8-jdk
+    steps:
+      - run: which eb
+   
 
 workflows:
   version: 2
   build-test-lint:
     jobs:
       - build
+      - deploy:
+          requires:
+            - build
