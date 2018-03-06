@@ -58,6 +58,8 @@ jobs:
     attach_workspace:
       at : /home/circleci/project/
     steps:
+      - attach_workspace:
+          at: /home/circleci/project
       - run: curl -O https://bootstrap.pypa.io/get-pip.py
       - run: python get-pip.py --user
       - run: echo "export PATH=/home/circleci/.local/bin/:$PATH" > ~/.python_path
