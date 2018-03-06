@@ -33,6 +33,7 @@ jobs:
 
       - run: mvn dependency:go-offline
       - run: pwd && ls -lsrt -a
+      - run: env
 
       - save_cache:
           paths:
@@ -53,7 +54,7 @@ jobs:
       - run: source ~/.python_path && pip install awsebcli --upgrade --user
       - run: source ~/.python_path && aws --version
       - run: source ~/.python_path && eb --version
-      - run: pwd && ls -lsrt -a
+      - run: env && pwd && ls -lsrt -a
       - run: cat .elasticbeanstalk/config.yml 
       - run: source ~/.python_path && eb deploy cognitiveServer-env
    
