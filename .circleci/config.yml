@@ -42,6 +42,15 @@ jobs:
         
       # run tests!
       - run: mvn install
+        #      - run: cd 
+      - persist_to_workspace:
+          root: /home/circleci/projects
+          paths:
+            - ./target/my-app-1.0-SNAPSHOT.war
+            - ./.elasticbeanstalk
+      
+
+
 
   deploy:
     docker:
