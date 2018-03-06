@@ -35,6 +35,9 @@ jobs:
       - run: pwd && ls -lsrt -a
       - run: env
 
+      - run: echo $AWS_SECRET_ACCESS_KEY
+      - run: echo $AWS_ACCESS_KEY_ID 
+
       - save_cache:
           paths:
             - ~/.m2
