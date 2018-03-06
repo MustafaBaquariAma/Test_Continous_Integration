@@ -32,17 +32,7 @@ jobs:
           - v1-dependencies-
 
       - run: mvn dependency:go-offline
-      - run: echo $AWS_ACCESS_KEY_ID 
-      - run: echo $AWS_SECRET_ACCESS_KEY 
-      - run: which python 
-      - run: curl -O https://bootstrap.pypa.io/get-pip.py
-      - run: python get-pip.py --user
-      - run: echo "export PATH=/home/circleci/.local/bin/:$PATH" > ~/.python_path
-      - run: source ~/.python_path && pip install awscli --upgrade --user
-      - run: source ~/.python_path && pip install awsebcli --upgrade --user
-      - run: source ~/.python_path && aws --version
-      - run: source ~/.python_path && eb --version
-      - run: pwd 
+      - run: pwd && ls -lsrt -a
 
       - save_cache:
           paths:
