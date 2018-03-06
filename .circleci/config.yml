@@ -53,9 +53,9 @@ jobs:
       - run: source ~/.python_path && pip install awsebcli --upgrade --user
       - run: source ~/.python_path && aws --version
       - run: source ~/.python_path && eb --version
-      - run: cd /home/circleci/repo && pwd && ls -lsrt -a
-      - run: cd /home/circleci/repo && cat .elasticbeanstalk/config.yml 
-      - run: cd /home/circleci/repo && source ~/.python_path && eb deploy cognitiveServer-env
+      - run: pwd && ls -lsrt -a
+      - run: cat .elasticbeanstalk/config.yml 
+      - run: source ~/.python_path && eb deploy cognitiveServer-env
    
 
 workflows:
