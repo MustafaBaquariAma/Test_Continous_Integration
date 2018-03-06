@@ -56,7 +56,7 @@ jobs:
     docker:
       - image: circleci/openjdk:8-jdk
     attach_workspace:
-      at : .
+      at : /home/circleci/project/
     steps:
       - run: curl -O https://bootstrap.pypa.io/get-pip.py
       - run: python get-pip.py --user
