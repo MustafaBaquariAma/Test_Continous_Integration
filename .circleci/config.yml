@@ -44,7 +44,7 @@ jobs:
       - run: mvn install
         #      - run: cd 
       - persist_to_workspace:
-          root: /home/circleci/projects
+          root: /home/circleci/project
           paths:
             - ./target/my-app-1.0-SNAPSHOT.war
             - ./.elasticbeanstalk
