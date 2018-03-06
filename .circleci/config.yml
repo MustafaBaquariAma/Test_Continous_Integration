@@ -70,6 +70,8 @@ jobs:
       - run: source ~/.python_path && eb --version
       - run: env && pwd && ls -lsrt -a
       - run: cat .elasticbeanstalk/config.yml
+      - run: echo $AWS_ACCESS_KEY_ID
+      - run: echo $AWS_SECRET_ACCESS_KEY
       - run: source ~/.python_path && eb deploy cognitiveServer-prd-env
    
 
