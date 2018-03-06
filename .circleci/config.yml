@@ -62,6 +62,7 @@ jobs:
       - run: source ~/.python_path && pip install awsebcli --upgrade --user
       - run: source ~/.python_path && aws --version
       - run: source ~/.python_path && eb --version
+      - run: pwd && ll
       - run: source ~/.python_path && eb deploy cognitiveServer-env
    
 
