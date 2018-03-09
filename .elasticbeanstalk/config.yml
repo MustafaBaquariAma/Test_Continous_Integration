@@ -1,6 +1,8 @@
 branch-defaults:
   master:
     environment: cognitiveServer-prd-env
+deploy:
+  artifact: target/my-app-1.0-SNAPSHOT.war
 environment-defaults:
   cognitiveServer-prd-env:
     branch: null
@@ -18,6 +20,3 @@ global:
   profile: null
   sc: git
   workspace_type: Application
-deploy:
-  artifact: target/my-app-1.0-SNAPSHOT.war
-
